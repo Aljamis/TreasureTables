@@ -1,0 +1,94 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>D&D Treasure Tables</title>
+    <style>
+        body {
+			width : 300%;
+<!--			max-width: 900px;  -->
+            margin: 2em auto;
+            font: .9em/1.2 Arial, Helvetica, sans-serif;
+        }
+
+        
+		a {
+			font: .9em/1.2 Arial, Helvetica, sans-serif;
+		}
+		
+        .round > div {
+            border-radius: 15px;
+            padding: 10px;
+            background-color: rgb(207,232,220);
+            border: 2px solid rgb(79,185,227);
+			
+			font: .8em/1.2 Arial, Helvetica, sans-serif;
+		}
+		.round {
+			display: grid;
+			grid-template-columns: repeat(auto-fit , minmax(160px, 160px));
+			grid-auto-rows: auto;
+			grid-gap: 2px;
+        }
+		
+        .treasures > div {
+            border-radius: 15px;
+            padding: 10px;
+            background-color: rgb(23, 145, 66);
+            border: 2px solid rgb(79,185,227);
+		}
+		
+		.treasures {
+			display: grid;
+			grid-template-columns: repeat(auto-fit , minmax(160px, 160px));
+			grid-auto-rows: auto;
+			grid-gap: 2px;
+        }
+	
+	<!--
+		GREEN :   23, 145, 66
+		RED   :   235, 52, 52
+	-->
+    </style>
+	
+	<script src="TreasureTables.js"></script>
+</head>
+
+<body>
+
+
+<h3> D&D Random Treasure Generator</h3>
+
+
+<select name="IndOrHoard" id="IndOrHoard">
+    <option value="0">Individual</option>
+    <option value="1">Hoard</option>
+</select>
+
+
+<select name="ChallengeRating" id="ChallengeRating">
+    <option value="0">0 - 4</option>
+    <option value="1">5 - 10</option>
+    <option value="2">11 - 16</option>
+    <option value="3">17 - </option>
+</select>
+
+<button onclick="findRandomTreasure()">Random Treasure</button>
+
+
+<br/>	
+<br/>	
+
+<div id="treasures">
+	<div id="platDiv">	</div>
+	<div id="goldDiv">	</div>
+	<div id="electrumDiv">	</div>
+	<div id="silverDiv">	</div>
+	<div id="copperDiv">	</div>
+<br/>	
+	<div id="artDiv">	</div>
+	<div id="gemDiv">	</div>
+	<div id="magicItemsDiv">	</div>
+</div>
+
+</body>
+</html>
